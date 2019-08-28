@@ -1,0 +1,65 @@
+@import "../../assets/scss/variables";
+.#{$prefix} {
+  &-TInput-wrap {
+    // width: 100%;
+    display: flex;
+    // padding-right: 18rpx;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14pt;
+    .left-child-box,.right-child-box{
+      flex: 0 0 auto;
+      vertical-align: middle;
+    }
+    .left-icon-box,.right-icon-box{
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 1em;
+      height: 1em;
+      padding-top: 10rpx;
+      padding-bottom: 10rpx;
+      padding-right: 0rpx;
+      padding-left: 0rpx;
+      margin-right: 24rpx;
+      vertical-align: middle;
+      image{
+        width: 100%;
+        height: 100%;
+        // transform:translateY(-2px);
+      }
+    }
+    .left-icon-box,.left-child-box{
+      margin-left: 32rpx;
+      &+.left-icon-box,.left-child-box{
+        margin-left: 1em;
+      }
+    }
+    .input-box{
+      flex: 1 1 auto;
+      position: relative;
+      .at-input{
+        margin-left: 0rpx;
+        .at-input__input{
+          margin-right: 32rpx;
+        }
+      }
+      &.input-box--no-border{
+        .input-box__border{
+          display: none;
+        }
+      }
+      .input-box__border{
+        position: absolute;
+        left: 32rpx;
+        bottom: 0;
+        width: calc( 100% - 64rpx );
+        height: 2rpx;
+        background-color: $page-color-2;
+      }
+    }
+  }
+}

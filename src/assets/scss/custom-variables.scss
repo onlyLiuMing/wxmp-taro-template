@@ -1,0 +1,125 @@
+/*
+* 用于覆盖taro-ui的默认样式
+*/
+@import "./color";
+.at-button {
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  box-shadow: 4rpx 4rpx 6rpx 0rpx $color-default;
+  &,
+  &.at-button--primary {
+    background-color: $color-default;
+    box-shadow: 1rpx 1rpx 4rpx 0 $color-default;
+  }
+  &.at-button--secondary {
+    color: $color-default;
+    background-color: #fff;
+    box-shadow: none;
+  }
+  &.at-button--disabled {
+    opacity: 1;
+    background-color: #B5B4F3;
+    border: 1px solid #B5B4F3;
+    box-shadow: 4rpx 4rpx 6rpx 0rpx #B5B4F3;
+  }
+}
+
+.at-textarea {
+  width: 100%;
+  font-size: 32rpx;
+  line-height: 1.5;
+  border-radius: 8rpx;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px $page-color-2 solid;
+  border-bottom: 1px $page-color-2 solid;
+  border-right: 1px $page-color-2 solid;
+  border-left: 1px $page-color-2 solid;
+}
+
+.at-switch {
+  margin-left: 32rpx;
+  padding: 32rpx 24rpx 32rpx 0;
+  .at-switch__title {
+    color: $fontcolor-gray-x;
+    flex: 6;
+    font-size: 12pt;
+  }
+}
+
+.at-list {
+  .item-content__info {
+    color: $fontcolor-gray-x;
+  }
+  .item-extra__info {
+    color: #333;
+  }
+}
+.at-list__item {
+  padding-left: 0rpx;
+  padding-right: 0rpx;
+  padding-top: 0rpx;
+  padding-bottom: 0rpx;
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+  &.at-list__item--thumb {
+    .item-thumb {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-right: 24rpx;
+      width: 1em;
+      height: 1em;
+      .item-thumb__info {
+        width: 14pt;
+        height: 14pt;
+      }
+    }
+  }
+  &.at-list__item--disabled {
+    .at-list__item-container {
+      opacity: 1;
+      .at-list__item-extra {
+        opacity: 0.3;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    display: none;
+    box-shadow: none;
+  }
+  .item-extra__icon-arrow {
+    font-size: initial;
+  }
+  .at-list__item-content {
+    flex: 1 1 auto;
+  }
+  .at-list__item-extra {
+    flex: 2 1 auto;
+  }
+}
+
+.at-input {
+  margin-left: 32rpx;
+  margin-right: 32rpx;
+  .at-input__title {
+    color: #333;
+  }
+  .at-input__input {
+    margin-right: 0rpx;
+    padding-right: 0rpx;
+  }
+  .at-input--disabled {
+    opacity: 1;
+    .at-input__input {
+      opacity: 0.3;
+    }
+  }
+}

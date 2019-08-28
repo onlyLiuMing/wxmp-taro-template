@@ -1,0 +1,78 @@
+@import "./assets/scss/variables.scss";
+// $color-brand: #7f7ced;
+// 覆盖taro-ui中的颜色
+$color-brand: $default-color;
+@import "~taro-ui/dist/style/index.scss";
+
+/************ start reset **********/
+page {
+  background-color: $page-color-2;
+}
+image {
+  flex: 0 0 auto;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+}
+
+// 隐藏scroll-view的滚动条
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/********** end reset **********/
+
+// 清除button的默认样式（用于button作为外壳）
+.no-button {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  box-sizing: border-box;
+  text-align: unset;
+  text-decoration: none;
+  line-height: unset;
+  border-radius: unset;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  background-color: transparent;
+  .button-hover {
+    color: unset;
+    background-color: transparent;
+  }
+  &::after {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+}
+
+/**
+* 点击效果，用于 hover-class='' 事件上
+*/
+.hover-class,
+.hover-class--bg {
+  background-color: $page-color-2;
+}
+.hover-class--move {
+  transform: translate(1rpx, 1rpx);
+}
+.hover-class--over-bg {
+  position: relative;
+  &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $page-color-2;
+    opacity: 0.1;
+    z-index: 10;
+  }
+}

@@ -1,0 +1,14 @@
+/**
+ * Component:	Variables
+ * Description:	Define all variables
+ * Time: 2018-11-13
+*/
+//======== 【Prefix】 ========
+// css前缀
+$prefix: 'fanink-ck';
+$base-z-index: 1500;
+$page-color: #ffffff; 
+$page-color-2: #f8f8f8;
+@import './color.scss';
+@import './font.scss';
+@import './custom-variables.scss';

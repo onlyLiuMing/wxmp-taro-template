@@ -1,0 +1,23 @@
+@import './color';
+
+// font-size
+$fontsize-small-x: 9pt !important;
+$fontsize-small: 10pt !important;
+$fontsize-middle: 12pt !important;
+$fontsize-large: 14pt !important;
+$fontsize-large-x: 20pt !important;
+$fontsize-large-xx: 40pt !important;
+
+// font-color
+$fontcolor-white: $color-white;
+$fontcolor-balck: $color-balck;
+$fontcolor-violet: $color-violet;
+$fontcolor-red: $color-red;
+$fontcolor-blue: $color-blue;
+$fontcolor-green: $color-green;
+$fontcolor-yellow: $color-yellow;
+$fontcolor-orange: $color-orange;
+
+$fontcolor-gray: #333333;
+$fontcolor-gray-x: #666666;
+$fontcolor-gray-xx: #999999;

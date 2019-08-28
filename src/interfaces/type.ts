@@ -1,0 +1,5 @@
+/*
+ * global types
+ */
+
+export default {}

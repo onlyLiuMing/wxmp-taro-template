@@ -1,0 +1,23 @@
+@import "../../assets/scss/variables";
+.#{$prefix} {
+  &-TServiceSuport-wrap {
+    .page-service-support {
+      display: flex;
+      justify-content: center;
+      flex-direction: center;
+      align-items: center;
+      position: fixed;
+      width: 100rpx;
+      height: 100rpx;
+      right: 28pt;
+      bottom: 28pt;
+      border-radius: 50%;
+      overflow: hidden;
+      .scan-icon {
+        flex: 1 1 auto;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

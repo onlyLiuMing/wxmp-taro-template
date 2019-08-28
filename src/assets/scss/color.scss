@@ -1,0 +1,117 @@
+/** color.scss **/
+
+/**
+* 白色
+* $white  
+*/ 
+$color-white: #ffffff;
+
+/**
+* 黑色
+* $black
+*/
+$color-black: #000000;
+$color-black-2: mix($black, $white, 90%);
+$color-black-3: mix($black, $white, 80%);
+$color-black-4: mix($black, $white, 70%);
+$color-black-5: mix($black, $white, 60%);
+$color-black-6: mix($black, $white, 50%);
+
+/**
+* 灰白 
+* 常用灰色：#ababab #b7b7b7 #cccccc #cdc9c9 #d3d3d3 #dcdcdc #dedede #e7e7e7
+*/ 
+$color-gray: #ababab;
+$color-gray-2: #b7b7b7;
+$color-gray-3: #cccccc;
+$color-gray-4: #d3d3d3;
+$color-gray-5: #dcdcdc;
+$color-gray-6: #e7e7e7;
+
+/**
+* 蓝色
+* $blue
+*/
+$color-blue: rgb(82, 118, 225);
+$color-blue-2: mix($blue, $white, 90%);
+$color-blue-3: mix($blue, $white, 80%);
+$color-blue-4: mix($blue, $white, 70%);
+$color-blue-5: mix($blue, $white, 60%);
+$color-blue-6: mix($blue, $white, 50%);
+
+/**
+* 天蓝色
+* $azure
+*/
+$color-azure: #438ce2;
+$color-azure-2: mix($azure, $white, 90%);
+$color-azure-3: mix($azure, $white, 80%);
+$color-azure-4: mix($azure, $white, 70%);
+$color-azure-5: mix($azure, $white, 60%);
+$color-azure-6: mix($azure, $white, 50%);
+
+/**
+* 红色
+* $red
+*/
+$color-red: rgb(255, 30, 0);
+$color-red-2: mix($red, $white, 90%);
+$color-red-3: mix($red, $white, 80%);
+$color-red-4: mix($red, $white, 70%);
+$color-red-5: mix($red, $white, 60%);
+$color-red-6: mix($red, $white, 50%);
+
+/**
+* 黄色
+* $yellow
+*/
+$color-yellow: rgb(254, 214, 29);
+$color-yellow-2: mix($yellow, $white, 90%);
+$color-yellow-3: mix($yellow, $white, 80%);
+$color-yellow-4: mix($yellow, $white, 70%);
+$color-yellow-5: mix($yellow, $white, 60%);
+$color-yellow-6: mix($yellow, $white, 50%);
+
+/**
+* 绿色
+* $green
+*/
+$color-green: rgb(127, 189, 88);
+$color-green-2: mix($green, $white, 90%);
+$color-green-3: mix($green, $white, 80%);
+$color-green-4: mix($green, $white, 70%);
+$color-green-5: mix($green, $white, 60%);
+$color-green-6: mix($green, $white, 50%);
+
+/**
+* 橘黄
+* $orange
+*/
+$color-orange: rgb(240, 119, 54);
+$color-orange-2: mix($orange, $white, 90%);
+$color-orange-3: mix($orange, $white, 80%);
+$color-orange-4: mix($orange, $white, 70%);
+$color-orange-5: mix($orange, $white, 60%);
+$color-orange-6: mix($orange, $white, 50%);
+
+/**
+* 紫色
+* $violet
+*/
+// $violet: rgb(77, 94, 170); #9896FE
+$color-violet: rgb(152, 150, 254);
+$color-violet-2: mix($violet, $white, 90%);
+$color-violet-3: mix($violet, $white, 80%);
+$color-violet-4: mix($violet, $white, 70%);
+$color-violet-5: mix($violet, $white, 60%);
+$color-violet-6: mix($violet, $white, 50%);
+
+/**
+* $color-default
+*/
+$color-default: $violet;
+$color-default-2: $violet-2;
+$color-default-3: $violet-3;
+$color-default-4: $violet-4;
+$color-default-5: $violet-5;
+$color-default-6: $violet-6;

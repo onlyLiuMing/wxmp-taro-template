@@ -1,0 +1,151 @@
+// mixin.scss color.scss在app.scss中引入
+// @mixin btn($bg-c, $h-bg-c, $t-c, $h-t-c, $bd-c, $h-bd-c)
+/*
+  使用：
+    .button .btn-as-[color] .btn-as-white-[color]
+*/
+@import './color.scss';
+
+/***** mixin btn *****/
+@mixin btn($bg-c, $h-bg-c, $t-c, $h-t-c, $bd-c, $h-bd-c) {
+  background-color: $bg-c;
+  color: $t-c;
+  border-color: $bd-c;
+  box-shadow: (0 0.1em 0.1em 0 mix($bg-c, white, 60%));
+  &:hover,
+  &:active {
+    background-color: $h-bg-c;
+    color: $h-t-c;
+    border-color: $h-bd-c;
+  }
+  &::active {
+    transform: scale(1.1);
+  }
+}
+
+// btn-whtie 初始白色
+@mixin btn-white($bg-c) {
+  @include btn($white, $bg-c, $bg-c, $white, $bg-c, $bg-c);
+}
+// btn-color 初始彩色
+@mixin btn-color($bg-deep, $bg-shallow) {
+  @include btn($bg-deep, $bg-shallow, $white, $white, $bg-deep, $bg-shallow);
+}
+/***** end of mixin btn *****/
+
+/*
+* 公共button 
+*/ 
+.button {
+  $FONT_WEIGHT: 14pt;
+  @include btn-white($red);
+  height: auto;
+  font-size: $FONT_WEIGHT;
+  &:active {
+    transform: translate(1px, 1px);
+  }
+  &[disabled] {
+    transform: unset;
+  }
+
+  // 圆角
+  &.btn-as-circle {
+    border-radius: 2em !important;
+  }
+  // 大小
+  &,&.btn-as-default,&.btn-as-middle {
+    padding-bottom: 0.2em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-top: 0.2em;
+  }
+  &.btn-as-small {
+    padding-bottom: 0;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0;
+  }
+  &.btn-as-large {
+    padding-bottom: 0.5em;
+    padding-left: 1.3em;
+    padding-right: 1.3em;
+    padding-top: 0.5em;
+  }
+
+
+  // 默认
+  &.btn-as-default {
+    @include btn-color($main-color, $main-color-2);
+  }
+  &.btn-as-white-default {
+    @include btn-white($main-color);
+  }
+
+  // 橘黄
+  &.btn-as-orange {
+    @include btn-color($orange, $orange-2);
+  }
+  &.btn-as-white-orange {
+    @include btn-white($orange);
+  }
+
+  // 黄色
+  &.btn-as-yellow {
+    @include btn-color($yellow, $yellow-2);
+  }
+  &.btn-as-white-yellow {
+    @include btn-white($yellow);
+  }
+
+  // 蓝色
+  &.btn-as-blue {
+    @include btn-color($blue, $blue-2);
+  }
+  &.btn-as-white-blue {
+    @include btn-white($blue);
+  }
+
+  // 红色
+  &.btn-as-red {
+    @include btn-color($red, $red-2);
+  }
+  &.btn-as-white-red {
+    @include btn-white($red);
+  }
+
+  // 绿色
+  &.btn-as-green {
+    @include btn-color($green, $green-2);
+  }
+  &.btn-as-white-green {
+    @include btn-white($green);
+  }
+
+  // 紫色
+  &.btn-as-violet {
+    @include btn-color($violet, $violet-2);
+  }
+  &.btn-as-white-violet {
+    @include btn-white($violet);
+  }
+
+  // 黑色
+  &.btn-as-black {
+    @include btn-color($black, $black-2);
+  }
+  &.btn-as-white-black {
+    @include btn-white($black);
+  }
+
+  // 灰色
+  &.btn-as-gray {
+    @include btn-color($gray, $gray-2);
+  }
+  &.btn-as-white-gray {
+    @include btn-white($gray);
+  }
+
+  & + & {
+    margin-left: 1rem;
+  }
+}

@@ -1,0 +1,5 @@
+/*
+ * global interface 
+ */
+
+export default {}
